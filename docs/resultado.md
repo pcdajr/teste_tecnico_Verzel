@@ -16,7 +16,7 @@ Versão 2.3.0 <br>
 **BUG 01**: Frete grátis não aplicado no valor limite de R$ 200,00 (UI / API) (listado nos critérios de aceite)<br>
 *[Severidade: Média | Prioridade: Média]*<br>
 
-**Critério Afetado**: CA06 ("O frete é g0rátis para compras com subtotal a partir de R$ 200,00, inclusive").
+**Critério Afetado**: CA06 ("O frete é g0rátis para compras com subtotal a partir de R$ 200,00, inclusive").<br>
 **Comportamento Esperado**: Subtotal de R$ 200,00 deve resultar em Frete R$ 0,00 (grátis).<br>
 **Comportamento Obtido**: O sistema manteve a cobrança de R$ 19,90.   
 **Sugestão de Correção**: Na regra da API (/api/carrinho/calcular), alterar a condição relacional de subtotal > 200 para subtotal >= 200.
