@@ -1,0 +1,26 @@
+{
+  "name": "teste_tecnico_verzel",
+  "version": "1.0.0",
+  "description": "Processo de validação de uma entrega na Verzel Store [ Loja fictícia - E-Commerce ]",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcdajr/teste_tecnico_Verzel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pcdajr/teste_tecnico_Verzel/issues"
+  },
+  "homepage": "https://github.com/pcdajr/teste_tecnico_Verzel#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
+  }
+}

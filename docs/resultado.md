@@ -28,8 +28,8 @@ Versão 2.3.0 <br>
 
 **Critério Afetado**: CA10 ("Cada produto pode ter no máximo 5 unidades por pedido. A regra vale para a interface e para a API").
 **Comportamento Esperado**: A API deve rejeitar o payload com HTTP 400 Bad Request se algum item tiver quantidade > 5.<br>
-**Comportamento Obtido**: A requisição POST /api/finalizar_pedido aceitou 6 unidades e retornou 200 OK.   
-**Sugestão de Correção**: Validar na variável quantidade para garantir que não acontece novamente.
+**Comportamento Obtido**: A requisição POST /api/finalizar_pedido aceitou 6 unidades ao forçar mudança no body e retornou 200 OK.   
+**Sugestão de Correção**: Validar na variável quantidade para garantir que não aconteça novamente.
 
 ## 
 **BUG 03**: Input de Nome Completo aceita números e caracteres especiais (Encontrado em testes complementares exploratórois)<br>
