@@ -6,8 +6,8 @@
 
 Funcionalidade: Gestão e Cálculos do Carrinho de Compras
 
-  [Como] cliente do e-commerce
-  [Quero] adicionar produtos e aplicar cupons no carrinho
+  [Como] cliente do e-commerce<br>
+  [Quero] adicionar produtos e aplicar cupons no carrinho<br>
   [Para] visualizar os valores de subtotal, descontos e frete calculados corretamente
 
 
@@ -38,8 +38,8 @@ Funcionalidade: Gestão e Cálculos do Carrinho de Compras
 
 Funcionalidade: Finalização do Pedido e Cadastro de Entrega
 
-  [Como] cliente do e-commerce
-  [Quero] preencher meus dados de entrega e revisar o informações
+  [Como] cliente do e-commerce<br>
+  [Quero] preencher meus dados de entrega e revisar o informações<br>
   [Para] confirmar e concluir o meu pedido com sucesso
 
 
@@ -67,8 +67,8 @@ Funcionalidade: Finalização do Pedido e Cadastro de Entrega
 
 Funcionalidade: Consulta de Produtos no Catálogo via API
 
-  [Como] sistema integrado / cliente
-  [Quero] consultar a lista completa de produtos ou obter dados de um item por ID
+  [Como] sistema integrado / cliente<br>
+  [Quero] consultar a lista completa de produtos ou obter dados de um item por ID<br>
   [Para] exibir o catálogo atualizado e validar as informações das mercadorias
 
 
