@@ -16,16 +16,15 @@ test('Concessão de frete grátis no limite de R$ 200,00', async ({ page }) => {
 
   await page.getByRole('link', { name: 'Carrinho 1 itens no carrinho' }).click();
   
-  
   await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
 
   // clicando para chegar no valor de R$ 200,00 e verificar se o frete grátis foi aplicado
   await page.getByRole('button', { name: 'Aumentar quantidade de' }).click();
-  await expect(page.getByRole('definition').filter({ hasText: 'R$ 200,00' })).toBeVisible();
+  await expect(page.getByRole('region').getByText('R$ 200,00')).toBeVisible();
+  
   // verificando se o frete grátis foi aplicado
-  await expect(page.getByText('R$ 0,00')).toBeVisible();
-  
-  
-
+  await expect(page.getByText('Grátis')).toBeVisible();
+  await expect(page.getByText('R$ 19,90')).not.toBeVisible();
+  await expect(page.getByText('Faltam R$ 0,00 para o frete')).not.toBeVisible();
 
 });

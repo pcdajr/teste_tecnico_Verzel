@@ -19,6 +19,7 @@ test('Aplicação de cupom válido com desconto', async ({ page }) => {
   
   await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
 
+  // aplicando cupom com caica baixa
   await page.getByRole('textbox', { name: 'Cupom de desconto' }).fill('bemvindo10');
   await page.getByRole('button', { name: 'Aplicar cupom' }).click();
 

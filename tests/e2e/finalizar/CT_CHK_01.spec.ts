@@ -8,14 +8,21 @@ test('Submissão de pedido com dados válidos', async ({ page }) => {
   
   await page.getByRole('article', { name: 'Calça Jeans Slim' }).getByRole('button').click();
   await page.getByRole('article', { name: 'Mochila Urbana 20L' }).getByRole('button').click();
-  
   await page.getByRole('link', { name: 'Carrinho 2 itens no carrinho' }).click();
   
-  //await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
+  await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
+  await page.getByRole('link', { name: 'Finalizar compra' }).click();
 
- 
+  await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/checkout');
   
-  
+  await page.getByRole('textbox', { name: 'Nome completo' }).fill('João da Silva');
+  await page.getByRole('textbox', { name: 'E-mail' }).fill('joao.silva@gmail.com');
+  await page.getByRole('textbox', { name: 'CEP' }).fill('12345-678');
+  await page.getByRole('button', { name: 'Confirmar pedido' }).click();
 
+  await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/pedido-confirmado');
+  await expect(page.getByText('Pedido confirmado')).toBeVisible();
+
+  
 
 });
