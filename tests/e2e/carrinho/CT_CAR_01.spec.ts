@@ -16,15 +16,17 @@ test('Aplicação de cupom válido com desconto', async ({ page }) => {
 
   await page.getByRole('link', { name: 'Carrinho 4 itens no carrinho' }).click();
   
-  //await page.goto('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
+  
   await expect(page).toHaveURL('https://verzel-store.qa-test-verzel-store.workers.dev/carrinho');
 
-  await page.getByRole('textbox', { name: 'Cupom de desconto' }).fill('BEMVINDO10');
+  await page.getByRole('textbox', { name: 'Cupom de desconto' }).fill('bemvindo10');
   await page.getByRole('button', { name: 'Aplicar cupom' }).click();
 
   
   // Garante que o elemento está visível E que o valor após o R$ não é zero
   await expect(page.getByText('R$ 0,00')).not.toBeVisible();
   await expect(page.getByText('- R$')).toBeVisible();
+  await expect(page.getByText('Cupom BEMVINDO10 aplicado.')).toBeVisible();
+
 
 });
