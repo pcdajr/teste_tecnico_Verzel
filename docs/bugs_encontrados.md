@@ -27,8 +27,8 @@ Versão 2.3.0 <br>
 *[Severidade: Alta | Prioridade: Alta]*<br>
 
 **Critério Afetado**: CA10 ("Cada produto pode ter no máximo 5 unidades por pedido. A regra vale para a interface e para a API").
-**Comportamento Esperado**: A API deve rejeitar o payload com HTTP 400 Bad Request se algum item tiver quantidade > 5.<br>
-**Comportamento Obtido**: A requisição POST /api/finalizar_pedido aceitou 6 unidades ao forçar mudança no body e retornou 200 OK.   
+**Comportamento Esperado**: A API deve rejeitar o payload com HTTP 422 se algum item tiver quantidade > 5.<br>
+**Comportamento Obtido**: A requisição POST /api/pedidos aceitou 6 unidades ao forçar mudança no body, apesar do limite definido.
 **Sugestão de Correção**: Validar na variável quantidade para garantir que não aconteça novamente.
 
 ## 
