@@ -1,4 +1,4 @@
-# Entrega de QA — Verzel Store
+# Entrega de QA — Verzel Store.
 
 ## Sobre a entrega
 
